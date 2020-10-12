@@ -1,0 +1,220 @@
+*{
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	min-height: 100vh;
+
+	padding: 0;
+	margin: 0;
+	width: 50%;
+	margin: auto;
+	color: #13eff6;
+	font-family: 'Montserrat', sans-serif;
+
+	background-color: #0a141f;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23102639' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23133c56' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23155674' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23157594' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23139ab6' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%230fc5da' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%2313eff6' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+@media screen and (max-width: 425px){
+	body{
+		width: 100%;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #0A141F;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #13eff6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #06989D;
+}
+
+.header-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	font-size: 3em;
+	height: 100vh;
+}
+
+div h1, div h2 {
+	text-align: center;
+	margin: 0;
+}
+
+.about-section {
+	margin: auto;
+	margin-bottom: 10rem;
+	height: 60vh;
+	width: 60%;
+}
+
+.profile-picture {
+	float: left;
+	margin-right: 20px;
+	width: 35%;
+	box-shadow: -20px 20px #13eff6;
+	margin-bottom: 40px;
+}
+
+@media screen and (max-width: 840px){
+	.profile-picture {
+		display: none;
+	}
+}
+
+.about-description {
+	font-size: 1.5em;
+}
+
+.about-description p {
+	font-family: 'Roboto', sans-serif;
+}
+
+.project-section {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto;
+	justify-content: center;
+	grid-gap: 10px;
+	width: 70vw;
+}
+
+
+@media screen and (max-width: 1400px){
+	.project-section{
+		grid-template-columns: auto auto;
+	}
+}
+
+@media screen and (max-width: 950px){
+	.project-section{
+		grid-template-columns: auto;
+	}
+}
+
+.project-title {
+	text-align: center;
+	font-size: 4em;
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+
+
+.item {
+	display: flex;
+	flex-basis: 0;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+	background: black;
+	border: #13eff6 2px solid;
+	margin: 2rem;
+	min-height: 400px;
+	max-height: auto;
+	width: 350px;
+	transition: 500ms;
+}
+
+.item:hover {
+	transform: scale(1.05);
+}
+
+.item-title {
+	color: #13eff6;
+	font-size: 2em;
+	margin-top: 10px;
+}
+
+.item-img {
+	height: auto;
+	width: 250px;
+}
+
+.item-subsection {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	margin-bottom: 10px;
+}
+
+.item-bubble{
+	color: #13eff6;
+	background-color: #0A141F;
+	border-radius: 10px;
+	padding: .25em 1em;
+	margin: .25em .5em;
+	text-align: center;
+	font-size: 1rem;
+}
+
+.contact-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	min-height: 100vh;
+	max-height: auto;
+	font-size: 2em;
+}
+
+
+input[type=text], input[type=email], textarea {
+	height: 3em;
+	width: 600px;
+	background: #0A141F;
+	color: #13eff6;
+	padding: 10px;
+	font-size: 1rem;
+	font-family: 'Roboto', sans-serif;
+	border: 1px solid #13eff6;
+	margin: 10px 0;
+}
+
+input[type=text]:focus {
+	border: none;
+}
+
+textarea {
+	height: 300px;
+	resize: none;
+}	
+
+input[type=submit] {
+	height: 3em;
+	width: 600px;
+	background: #0A141F;
+	color: #13eff6;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.4rem;
+	border: none;
+}
+
+input[type=submit]:hover {
+	background: #13eff6;
+	color: #0A141F;
+	margin-bottom: 100px;
+}
